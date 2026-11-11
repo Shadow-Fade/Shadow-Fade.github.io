@@ -27,6 +27,12 @@
     .meta { color:var(--muted); font-size:.9rem; margin:0 0 1rem; font-style:italic; }
     .card p { margin:.5rem 0; }
     .card strong { color:var(--ink); }
+    .tablewrap { overflow-x:auto; }
+    table { border-collapse: collapse; width:100%; font-size:.88rem; }
+    th, td { border:1px solid var(--line); padding:.5rem .6rem; text-align:left; vertical-align:top; }
+    th { background: var(--soft); }
+    .tag { display:inline-block; font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; background:#fff4e5; color:#8a4b00; padding:.15rem .5rem; border-radius:4px; margin-bottom:.5rem; }
+    .high { color:#b42318; font-weight:600; } .med { color:#8a4b00; font-weight:600; }
     footer { padding: 2rem 0 4rem; color: var(--muted); font-size: .9rem; }
   </style>
 </head>
@@ -79,7 +85,25 @@
         <p><strong>The result:</strong> The scans showed almost every port filtered and only the expected services reachable. We presented the findings to MITRE and our faculty mentor and folded their feedback into the final design.</p>
         <p><strong>Why it matters for GRC:</strong> It shows I understand how Zero Trust controls actually work, including identity, least privilege, and segmentation, and that I verify a control is doing its job before I trust it.</p>
       </article>
-      <p class="soft">More project write-ups and sample GRC artifacts are being added. Sample artifacts use fake data only.</p>
+      <article class="card">
+        <span class="tag">Sample, fake data</span>
+        <h3>Sample Risk Register</h3>
+        <p class="meta">Northwind Health Partners is a fictional company. No real client data.</p>
+        <div class="tablewrap">
+          <table>
+            <thead><tr><th>ID</th><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Rating</th><th>Recommended action</th><th>Owner</th></tr></thead>
+            <tbody>
+              <tr><td>R1</td><td>Former employees keep access because offboarding is manual</td><td>High</td><td>High</td><td class="high">High</td><td>Automate account removal from HR termination tickets, with a monthly access review</td><td>IT Manager</td></tr>
+              <tr><td>R2</td><td>A key vendor stores patient data without a current SOC 2 report</td><td>Medium</td><td>High</td><td class="high">High</td><td>Ask for the SOC 2 report or a security questionnaire, and add a contract clause</td><td>Vendor Manager</td></tr>
+              <tr><td>R3</td><td>Staff use public AI chat tools with sensitive data</td><td>Medium</td><td>High</td><td class="high">High</td><td>Publish an AI acceptable-use policy, and approve one internal tool</td><td>CISO</td></tr>
+              <tr><td>R4</td><td>Laptops are missing full-disk encryption</td><td>Low</td><td>Medium</td><td class="med">Medium</td><td>Enforce encryption through device management, and track exceptions</td><td>IT Manager</td></tr>
+              <tr><td>R5</td><td>Backups have never been restore-tested</td><td>Medium</td><td>Medium</td><td class="med">Medium</td><td>Run a quarterly restore test, and record the results</td><td>Infrastructure Lead</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Method:</strong> Each risk is rated by likelihood times impact and tied to a clear owner and a practical next action, so leadership can see what matters most and who is fixing it.</p>
+      </article>
+      <p class="soft">More sample GRC artifacts are being added. Samples use fake data only.</p>
     </section>
 
     <footer>
