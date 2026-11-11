@@ -70,6 +70,15 @@
         <p><strong>The result:</strong> All 5 bypass inputs were blocked after the fix.</p>
         <p><strong>Why it matters for GRC:</strong> It shows how I approach AI risk. I separate public and private data, test the control instead of trusting it, and document what failed and how it was fixed.</p>
       </article>
+      <article class="card">
+        <h3>Zero Trust Prototype in Azure</h3>
+        <p class="meta">George Mason University, MITRE-sponsored undergraduate capstone, two semesters, 2024</p>
+        <p><strong>The problem:</strong> Commercial Zero Trust products like Zscaler and Okta are too expensive for many organizations. Our goal was to see whether free, open-source tools could deliver the same core protections.</p>
+        <p><strong>What we built:</strong> A Zero Trust prototype on Azure virtual machines. SPIFFE/SPIRE gave each workload a verified identity, HashiCorp Vault stored the certificates, and Envoy proxies enforced mutual TLS, so services could only talk to each other over approved, encrypted paths.</p>
+        <p><strong>How we tested it:</strong> We scanned the environment with Nmap and researched attack paths with Metasploit. We also viewed the Envoy connection logs in Splunk to confirm that only approved traffic got through.</p>
+        <p><strong>The result:</strong> The scans showed almost every port filtered and only the expected services reachable. We presented the findings to MITRE and our faculty mentor and folded their feedback into the final design.</p>
+        <p><strong>Why it matters for GRC:</strong> It shows I understand how Zero Trust controls actually work, including identity, least privilege, and segmentation, and that I verify a control is doing its job before I trust it.</p>
+      </article>
       <p class="soft">More project write-ups and sample GRC artifacts are being added. Sample artifacts use fake data only.</p>
     </section>
 
